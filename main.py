@@ -62,7 +62,7 @@ class ReactionListener(threading.Thread):
                     time.sleep(__config__['wait_time'])
                     for ids in re.findall(r'<@[!|\S][0-9]+>', content):
                         if ids not in data.blacklist:
-                            ids = str(ids).split('<@!' if '!' in content else '<@')[1].split('>')[0]
+                            ids = str(ids).split('<@!' if '<@!' in content else '<@')[1].split('>')[0]
                             data.blacklist.append(ids)
                             self.send_dm(ids)
                             data.refresh_file(ids)
