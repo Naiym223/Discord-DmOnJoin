@@ -39,7 +39,7 @@ class Console:
     def print_logo():
         os.system('cls' if os.name == 'nt' else 'clear')
         print(Fore.LIGHTWHITE_EX + """
-        by github.com/its-vichy                      
+        by @wealthymerchant on Telegram                     
         """)
 
 
